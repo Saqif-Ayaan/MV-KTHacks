@@ -3,37 +3,47 @@
     <head>
         <style>
             body {
-                margin: (0, 0, 0, 0);
+                margin: 0;
+                padding: 0;
                 overflow: auto;
             }
             .background {
-                overflow: auto;
+                /* overflow: auto; */
                 width: 100%;
                 height: 100%;
-                background-image: url(https://cdn.discordapp.com/attachments/755991309675659355/1119781808729509910/ImageForArticle_22029_16430328199783209.webp);
+                /* background-image: url(https://cdn.discordapp.com/attachments/755991309675659355/1119781808729509910/ImageForArticle_22029_16430328199783209.webp); */
+                background-color: gray;
                 position: absolute;
                 z-index: -1;
-                filter: blur(8px);
+                vertical-align: baseline;
                 object-fit: cover;
+                margin: 0;
             }
+            .navbar{
+                background: black;
+                height: 80px;
+                display: flex;
+            } 
             a.detectionButton {
-                color: black;
+                color: white;
                 font-family: 'Courier New', Courier, monospace;
                 text-decoration: none;
-                background-color: white;
+                background-color: rgb(75, 0, 0);
                 text-align: center;
                 font-size: x-large;
+                /* font-weight: bold; */
             }
             a.detectionButton:hover {
                 background-color: rgb(175, 175, 175);
             }
             a.quizButton {
-                color: black;
+                color: white;
                 font-family: 'Courier New', Courier, monospace;
                 text-decoration: none;
-                background-color: white;
+                background-color: rgb(75, 0, 0);
                 font-size: x-large;
                 text-align: center;
+                /* font-weight: bold; */
             }
             a.quizButton:hover {
                 background-color: rgb(175, 175, 175);
@@ -48,7 +58,7 @@
                 text-align: center;
                 position: absolute;
                 color: rgb(255, 231, 231);
-                background-color: rgb(255, 159, 34);
+                /* background-color: rgb(255, 159, 34); */
                 text-decoration: none;
             }
 
@@ -69,13 +79,14 @@
     </head>
     <body>
         <img class = "background">
-        <a class="logo" href = "\"> TUMOR_DATA </a>
+        <nav class="navbar">
+            <a class="logo" href = "\"> TUMOR-DATA </a>
 
-        <div class = "b">
-            <a class = "detectionButton" href = "\riskDetection">| TUMOR_LOCATION_DETECTOR |</a>
-            <a class = "quizButton" href = "\quiz">| TAKE_QUIZ |</a>
-        </div>
-
+            <div class = "b">
+                <a class = "detectionButton" href = "\riskDetection">| TUMOR LOCATION DETECTOR |</a>
+                <a class = "quizButton" href = "\quiz">| TAKE QUIZ |</a>
+            </div>
+        </nav>
         <div class = "information">
             <h1>What is a tumor?</h1>
                 <p>

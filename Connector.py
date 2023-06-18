@@ -20,21 +20,21 @@ def assessment():
         file.save(os.path.join(file.filename))
         f = open(file.filename, 'r')
         if (f.readline().replace("\n", "").replace(" ", "") == 'b'):
-            answers.append("c")
+            answers.append("CORRECT!")
         else:   
-            answers.append("w")
+            answers.append("INCORRECT")
         if (f.readline().replace("\n", "").replace(" ", "") == '3'):
-            answers.append("c")
+            answers.append("CORRECT!")
         else:
-            answers.append("w")
+            answers.append("INCORRECT")
         if (f.readline().replace("\n", "").replace(" ", "") ==  "T"):
-            answers.append("c")
+            answers.append("CORRECT!")
         else:
-            answers.append("w")
+            answers.append("INCORRECT")
         if (f.readline() == 'benign'):
-            answers.append("c")
+            answers.append("CORRECT!")
         else:
-            answers.append("w")   
+            answers.append("INCORRECT")   
         return render_template("QuizResult.html", Res0 = answers[0], Res1 = answers[1], Res2 = answers[2], Res3 = answers[3])
     return render_template("QuizResult.html")
 
@@ -74,15 +74,15 @@ def det():
             22: "breast"
         }
 
-        x = ""
+        x = [""]*5
         
         for i in range(len(predictions)):
             if i == (len(predictions) - 1):
-                x += (f'patient {i+1} has a tumor in their {substitute.get(predictions[i])}')
+                x[i] = (f'patient {i+1} has a tumor in their {substitute.get(predictions[i])}')
             else:
-                x += (f'patient {i+1} has a tumor in their {substitute.get(predictions[i])} / ')
+                x[i] = (f'patient {i+1} has a tumor in their {substitute.get(predictions[i])}')
         
-        return render_template("Detection.html", pred = x)
+        return render_template("Detection.html", pred = x[0], pred2 = x[1], pred3 = x[2], pred4 = x[3], pred5 = x[4])
     return render_template("Detection.html")
 
 
