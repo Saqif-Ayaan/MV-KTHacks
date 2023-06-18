@@ -19,25 +19,18 @@ def assessment():
         ans2 = request.form['ans2']
         ans3 = request.form['ans3']
         ans4 = request.form['ans4']
-        # file = request.files["file"]
-        # file.save(os.path.join(file.filename))
-        # f = open(file.filename, 'r')
-        # if (f.readline().replace("\n", "").replace(" ", "") == 'b'):
         if (ans1 == 'b'):
             answers.append("CORRECT!")
         else:   
             answers.append("INCORRECT!")
-        # if (f.readline().replace("\n", "").replace(" ", "") == '3'):
         if (ans2 == '3'):
             answers.append("CORRECT!")
         else:
             answers.append("INCORRECT!")
-        # if (f.readline().replace("\n", "").replace(" ", "") ==  "T"):
         if (ans3 == "T"):
             answers.append("CORRECT!")
         else:
             answers.append("INCORRECT!")
-        # if (f.readline() == 'benign'):
         if (ans4 == 'benign'):
             answers.append("CORRECT!")
         else:
@@ -85,9 +78,9 @@ def det():
         
         for i in range(len(predictions)):
             if i == (len(predictions) - 1):
-                x[i] = (f'patient {i+1} has a tumor in their {substitute.get(predictions[i])}')
+                x[i] = (f"patient {i+1}'s origin of tumor is their {substitute.get(predictions[i])}")
             else:
-                x[i] = (f'patient {i+1} has a tumor in their {substitute.get(predictions[i])}')
+                x[i] = (f"patient {i+1}'s origin of tumor is their {substitute.get(predictions[i])}")
         
         return render_template("Detection.html", pred = x[0], pred2 = x[1], pred3 = x[2], pred4 = x[3], pred5 = x[4])
     return render_template("Detection.html")
