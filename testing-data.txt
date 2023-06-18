@@ -1,3 +1,4 @@
 age,sex,bone,bone-marrow,lung,pleura,peritoneum,liver,brain,skin,neck,supraclavicular,axillar,mediastinum,abdominal
 2,1,1,2,2,1,2,2,2,2,2,1,2,1,2
 3,1,2,2,2,2,2,1,2,1,2,2,2,2,2
+1,2,1,1,2,1,2,1,1,2,2,2,1,2,1

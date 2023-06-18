@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0, 0, 0, 0;
+                overflow: auto;
+
+            }
+            .background {
+                overflow: auto;
+                width: 100%;
+                height: 100%;
+                background-image: url(https://cdn.discordapp.com/attachments/755991309675659355/1119781808729509910/ImageForArticle_22029_16430328199783209.webp);
+                position: absolute;
+                z-index: -1;
+                filter: blur(8px);
+            }
+            a.home {
+                color: black;
+                font-family: 'Courier New', Courier, monospace;
+                text-decoration: none;
+                background-color: white;
+                font-size: x-large;
+            }
+            a.home:hover {
+                background-color: rgb(175, 175, 175);
+            }
+            .b {
+                text-align: center;
+            }
+            .logo {
+                margin: 0, 0, 0, 0;
+                overflow: auto;
+                width: 300px;
+                height: 6%;
+                font-family:'Courier New', Courier, monospace;
+                font-size: 300%;
+                text-align: center;
+                position: absolute;
+                color: rgb(255, 231, 231);
+                background-color: rgb(255, 159, 34);
+                text-decoration: none;
+            }
+            .in {
+                padding-top: 37%;
+                position: absolute;
+                text-size-adjust: 110%;
+            }
+            .q {
+                padding-top: 5%;
+                color: antiquewhite;
+            }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <img class = "background">
+        <a class="logo" href = "\"> TUMOR_DATA </a>
+        <div class = "b">
+            <a class = "home" href = "\">| HOME |</a>
+        </div>
+        <div class = "in">
+            <form method = "post" enctype="multipart/form-data">
+                <input type = "file" name = "file"/>
+                <input type = "submit" class = "submit" name = "submit"/>
+        </div>
+        <div class = "q"> 
+        <ol>
+        <h1><li>What is a tumor? <b> {{Res0}} </b></li></h1>
+        <ul> 
+        <h2>
+        <li>An overgrowth of cartilage</li>
+        <li>A divergent group of cells with damaged/mutated DNA</li>
+        <li>A lump of food stuck in an organ</li>
+        <li>A sudden organ failure</li>
+        <br>
+        </h2>
+        </ul>
+        <h1><li>OPEN ENDED, do not use letters to express your answer: How many classifications of tumors are there? <b>{{Res1}}</b></li></h1>
+        <br>
+        <h1><li>Cigarettes increase your risk of developing cancer <b>{{Res2}}</b></li></h1>
+        <ul> 
+        <h2>
+        <li>T</li>
+        <li>F</li>
+        <br>
+        </h2>
+        </ul>
+        <h1><li>OPEN ENDED, 1 word: What is another name for an unharmful tumor? <b>{{Res3}}</b></li></h1>
+        </ol>
+        </div>
+    </body>
+</html>

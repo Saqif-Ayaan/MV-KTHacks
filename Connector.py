@@ -10,11 +10,33 @@ rd = Blueprint('riskDetection', __name__)
 
 @st.route('/')
 def home():
-    return render_template("Start.html")
+    return render_template("Start.html",)
 
-@qz.route('/quiz')
+@qz.route('/quiz', methods = ["POST", "GET"])
 def assessment():
-    return render_template("Quiz.html")
+    if request.method == "POST":
+        answers = []
+        file = request.files["file"]
+        file.save(os.path.join(file.filename))
+        f = open(file.filename, 'r')
+        if (f.readline().replace("\n", "").replace(" ", "") == 'b'):
+            answers.append("c")
+        else:   
+            answers.append("w")
+        if (f.readline().replace("\n", "").replace(" ", "") == '3'):
+            answers.append("c")
+        else:
+            answers.append("w")
+        if (f.readline().replace("\n", "").replace(" ", "") ==  "T"):
+            answers.append("c")
+        else:
+            answers.append("w")
+        if (f.readline() == 'benign'):
+            answers.append("c")
+        else:
+            answers.append("w")   
+        return render_template("QuizResult.html", Res0 = answers[0], Res1 = answers[1], Res2 = answers[2], Res3 = answers[3])
+    return render_template("QuizResult.html")
 
 @rd.route('/riskDetection', methods = ["POST", "GET"])
 def det():
@@ -62,6 +84,7 @@ def det():
         
         return render_template("Detection.html", pred = x)
     return render_template("Detection.html")
+
 
 
 

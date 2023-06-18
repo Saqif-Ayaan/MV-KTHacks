@@ -3,28 +3,73 @@
     <head>
         <style>
             body {
+<<<<<<< HEAD
+                margin: 0, 0, 0, 0;
+=======
                 margin: (0, 0, 0, 0);
+>>>>>>> 8df1e0ae2aac0ca51b9f8aa0fee2846f8842e077
                 overflow: auto;
 
             }
             .background {
                 overflow: auto;
-                width: 99%;
-                height: 99%;
-                background-image: url(https://img.freepik.com/free-vector/isolated-cancer-cell-white-background_1308-90087.jpg?q=10&h=200);
+                width: 100%;
+                height: 100%;
+                background-image: url(https://cdn.discordapp.com/attachments/755991309675659355/1119781808729509910/ImageForArticle_22029_16430328199783209.webp);
                 position: absolute;
                 z-index: -1;
                 filter: blur(8px);
+            }
+            .in {
+                padding-top: 5%;
+                position: absolute;
+                text-size-adjust: 110%;
+            }
+            .text{
+                padding-top: 5.5%;
+                font-size:x-large;
+            }
+            .logo {
+                margin: 0, 0, 0, 0;
+                overflow: auto;
+                width: 300px;
+                height: 6%;
+                font-family:'Courier New', Courier, monospace;
+                font-size: 300%;
+                text-align: center;
+                position: absolute;
+                color: rgb(255, 231, 231);
+                background-color: rgb(255, 159, 34);
+                text-decoration: none;
+            }
+            a.home {
+                color: black(255, 231, 231);
+                font-family: 'Courier New', Courier, monospace;
+                text-decoration: none;
+                background-color: white;
+                font-size: x-large;
+            }
+            a.home:hover {
+                background-color: rgb(175, 175, 175);
+            }
+            .b {
+                text-align: center;
             }
         </style>
         <title></title>
     </head>
     <body>
         <img class = "background">
+        <a class="logo" href = "\"> TUMOR_DATA </a>
+        <div class = "b">
+            <a class = "home" href = "\">| HOME |</a>
+        </div>
+        <div class = "in">
             <form method = "post" enctype="multipart/form-data">
                 <input type = "file" name = "file"/>
                 <input type = "submit"/>
-            <div>
+        </div> 
+            <div class="text">
                 <br><h4><b>{{pred}}</b></h4>
                     <br>
             </div>

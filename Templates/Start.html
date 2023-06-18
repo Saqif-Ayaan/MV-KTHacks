@@ -5,34 +5,63 @@
             body {
                 margin: (0, 0, 0, 0);
                 overflow: auto;
-
             }
             .background {
                 overflow: auto;
-                width: 99%;
-                height: 99%;
-                background-image: url(https://img.freepik.com/free-vector/isolated-cancer-cell-white-background_1308-90087.jpg?q=10&h=200);
+                width: 100%;
+                height: 100%;
+                background-image: url(https://cdn.discordapp.com/attachments/755991309675659355/1119781808729509910/ImageForArticle_22029_16430328199783209.webp);
                 position: absolute;
                 z-index: -1;
                 filter: blur(8px);
+                object-fit: cover;
             }
             a.detectionButton {
                 color: black;
-                font-family: serif;
+                font-family: 'Courier New', Courier, monospace;
                 text-decoration: none;
-                background-color: lightsteelblue;
+                background-color: white;
+                text-align: center;
+                font-size: x-large;
             }
             a.detectionButton:hover {
-                background-color: lightcoral;
+                background-color: rgb(175, 175, 175);
             }
             a.quizButton {
                 color: black;
-                font-family: serif;
+                font-family: 'Courier New', Courier, monospace;
                 text-decoration: none;
-                background-color: lightsteelblue;
+                background-color: white;
+                font-size: x-large;
+                text-align: center;
             }
             a.quizButton:hover {
-                background-color: lightcoral;
+                background-color: rgb(175, 175, 175);
+            }
+            .logo {
+                margin: 0, 0, 0, 0;
+                overflow: auto;
+                width: 300px;
+                height: 6%;
+                font-family:'Courier New', Courier, monospace;
+                font-size: 300%;
+                text-align: center;
+                position: absolute;
+                color: rgb(255, 231, 231);
+                background-color: rgb(255, 159, 34);
+                text-decoration: none;
+            }
+
+            .b {
+                padding-left: 33%;
+            }
+
+            .information {
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                padding-top: 150px;
+                font-size: large;
+                color: antiquewhite;
             }
             
         </style>
@@ -40,13 +69,39 @@
     </head>
     <body>
         <img class = "background">
-        <a class = "detectionButton" href = "\riskDetection">Tumor Location Detector</a>
-        <a class = "quizButton" href = "\quiz">Take Quiz</a>
+        <a class="logo" href = "\"> TUMOR_DATA </a>
+
+        <div class = "b">
+            <a class = "detectionButton" href = "\riskDetection">| TUMOR_LOCATION_DETECTOR |</a>
+            <a class = "quizButton" href = "\quiz">| TAKE_QUIZ |</a>
+        </div>
 
         <div class = "information">
-            <p>
+            <h1>What is a tumor?</h1>
+                <p>
+                    A tumor is a growth of cells that diverges from regular cell division. <br> The tumor overides
+                    cellular regulation due to a mutation of the gene from damaged cells. <br> While some tumors can be benign, many are 
+                    either cancerous or evolve to become cancerous.
+                    https://my.clevelandclinic.org/health/diseases/21881-tumor
+                </p>
+            <h1>How does a tumor form?</h1>
+        
+                <p>
+                    Damaged genes are able to lead in inhibited regulation of cellular division. <br> As a result, many "imperfect" cells can begin to form,
+                    mutating further and further as they rapidly divide. <br> Stress, smoking, sun exposure, unhealthy foods, and alcohol are all leading 
+                    factors of cell damage and, as a result, contribute to someone's likelihood of developing the disease. 
+                    https://www.verywellhealth.com/cancer-causes-513773
+                </p>
 
-            </p>
+            <h1>Metastasis</h1>
+                <p>
+                    As cancer divides, it has the ability to spread to other organs; this process is frequently referred to as metastasis. <br>
+                    The significance of metastasis is that, depending on the location of the cancer, it may impair a different bodily function. <br>
+                    Furthermore, the location of the primary site—where cancer had originally developed—plays a role in determining what type of cancer is present. <br>
+                    The type of cancer can then be used to determine proper treatment options, as well as, possible developments in the cancer and metastasis. <br>
+                    <strong>With this, to completely treat and eliminate cancer, it is vital to track down this primary site, which is what our project seeks to accomplish.</strong>
+                    https://training.seer.cancer.gov/disease/diagnosis/
+                </p>
         </div>
         
 
