@@ -2,91 +2,108 @@
 <html>
     <head>
         <style>
-            body {
+            * {
+                outline: 0; 
                 margin: 0;
+                border: 0;
                 padding: 0;
-                overflow: auto;
-
+                font-size: 100%;
+                vertical-align: baseline;
+                background:transparent;
             }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
             .background {
                 overflow: auto;
                 width: 100%;
                 height: 100%;
-                /* background-image: url(https://cdn.discordapp.com/attachments/755991309675659355/1119781808729509910/ImageForArticle_22029_16430328199783209.webp); */
-                background-color: gray;
+                background-color: beige;
                 position: absolute;
                 z-index: -1;
-                /* filter: blur(8px); */
+                object-fit: cover;
             }
-            .navbar{
-                background: black;
-                height: 80px;
-                display: flex;
-            } 
+            
+            body {
+                background-color: beige;
+                z-index: -1;
+            }
+
+            .navbar {
+                text-align: inline;
+                width: 100%;
+                height: 50px;
+                background-color: gray;
+            }
+
             .in {
-                padding-top: 1%;
-                padding-left: 40%;
-                position: absolute;
+                text-align: center;
+                translate: (0px, 100px);
                 text-size-adjust: 110%;
+                background-color: rgb(153, 153, 136);
             }
-            .text{
-                padding-top: 5.5%;
-                font-size:x-large;
-            }
-            .logo {
-                margin: 0, 0, 0, 0;
-                overflow: auto;
-                width: 300px;
-                height: 6%;
-                font-family:'Courier New', Courier, monospace;
-                font-size: 300%;
-                text-align: center;
+
+            .b1 {
                 position: absolute;
-                color: rgb(255, 231, 231);
-                /* background-color: rgb(255, 159, 34); */
+                transform: translate(145px, -33px);
                 text-decoration: none;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif
+                
             }
-            a.home {
-                color: black(255, 231, 231);
-                font-family: 'Courier New', Courier, monospace;
+            
+            .b2 {
+                position: absolute;
+                transform: translate(295px, -33px);
                 text-decoration: none;
-                background-color: white;
-                font-size: x-large;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif
             }
-            a.home:hover {
-                background-color: rgb(175, 175, 175);
-            }
-            .b {
-                text-align: center;
+
+            .b3 {
+                position: absolute;
+                transform: translate(1787px, -33px);
+                text-decoration: none;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif
             }
             .pred{
-                padding-left: 36%;
+                text-align: center;
                 font-size: xx-large;
-                color: black;
             }
+
+            
         </style>
         <title></title>
     </head>
     <body>
         <img class = "background">
-        <nav class="navbar">
-            <a class="logo" href = "\"> TUMOR-DATA </a>
-        </nav>
+
+        <div class = "navbar">
+            <img src = "https://images-platform.99static.com//p4qV4Cw5YyLUPRDbjSiNLniZEDU=/210x2945:1053x3788/fit-in/500x500/projects-files/64/6414/641472/1af8a316-da6d-4b6b-935f-9bfdc004eb03.jpg" height = 50 width = 70>
+        </div>
+
+        <b><a class = b1 href = "/#down2">Take Quiz</a></b>
+        <b><a class = b2 href = "/riskDetection">Use Tumor Detector</a></b>
+        <b><a class = b3 href = "/">Home</a></b>
+
         <div class = "in">
             <form method = "post" enctype="multipart/form-data">
                 <input type = "file" name = "file"/>
                 <input type = "submit"/>
         </div> 
-            <div class="text">
-                <br><h4><a class="pred">{{pred}}</a></h4>
+            <div class="pred">
+                <br><h4><b>{{pred}}</b></h4>
                     <br>
-                <br><h4><a class="pred">{{pred2}}</a></h4>
+                <br><h4><b>{{pred2}}</b></h4>
                     <br>
-                <br><h4><a class="pred">{{pred3}}</a></h4>
+                <br><h4><b>{{pred3}}</b></h4>
                     <br>
-                <br><h4><a class="pred">{{pred4}}</a></h4>
+                <br><h4><b>{{pred4}}</b></h4>
                     <br>
-                <br><h4><a class="pred">{{pred5}}</a></h4>
+                <br><h4><b>{{pred5}}</b></h4>
                     <br>
             </div>
     </body>

@@ -1,110 +1,200 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            body {
+<style>
+            * {
+                outline: 0; 
                 margin: 0;
+                border: 0;
                 padding: 0;
-                overflow: auto;
+                font-size: 100%;
+                vertical-align: baseline;
+                background:transparent;
             }
+            
+            /* html {
+                scroll-behavior: smooth;
+            } */
+            
             .background {
-                /* overflow: auto; */
+                overflow: auto;
                 width: 100%;
                 height: 100%;
-                /* background-image: url(https://cdn.discordapp.com/attachments/755991309675659355/1119781808729509910/ImageForArticle_22029_16430328199783209.webp); */
-                background-color: gray;
+                background-color: beige;
                 position: absolute;
                 z-index: -1;
-                vertical-align: baseline;
                 object-fit: cover;
-                margin: 0;
             }
-            .navbar{
-                background: black;
-                height: 80px;
-                display: flex;
-            } 
-            a.detectionButton {
-                color: white;
-                font-family: 'Courier New', Courier, monospace;
-                text-decoration: none;
-                background-color: rgb(75, 0, 0);
-                text-align: center;
-                font-size: x-large;
-                /* font-weight: bold; */
-            }
-            a.detectionButton:hover {
-                background-color: rgb(175, 175, 175);
-            }
-            a.quizButton {
-                color: white;
-                font-family: 'Courier New', Courier, monospace;
-                text-decoration: none;
-                background-color: rgb(75, 0, 0);
-                font-size: x-large;
-                text-align: center;
-                /* font-weight: bold; */
-            }
-            a.quizButton:hover {
-                background-color: rgb(175, 175, 175);
-            }
-            .logo {
-                margin: 0, 0, 0, 0;
-                overflow: auto;
-                width: 300px;
-                height: 6%;
-                font-family:'Courier New', Courier, monospace;
-                font-size: 300%;
-                text-align: center;
+            
+            .background2 {
+                transform: translate(0px, 955px);
+                width: 100%;
+                height: 125%;
+                background-color: rgb(227,226,223);
                 position: absolute;
-                color: rgb(255, 231, 231);
-                /* background-color: rgb(255, 159, 34); */
-                text-decoration: none;
+                z-index: -1;
+                object-fit: cover;
             }
 
-            .b {
-                padding-left: 33%;
+            .background3 {
+                transform: translate(0px, 1910px);
+                width: 100%;
+                height: 100%;
+                background-color: rgb(41,189,193);
+                position: absolute;
+                z-index: -1;
+                object-fit: cover;
+            }
+          
+            .navbar {
+                text-align: inline;
+                width: 100%;
+                height: 50px;
+                background-color: gray;
+            }
+            
+            .b1 {
+                position: absolute;
+                transform: translate(145px, -33px);
+                text-decoration: none;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif
+                
+            }
+            
+            .b2 {
+                position: absolute;
+                transform: translate(295px, -33px);
+                text-decoration: none;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif
+            }
+
+            .b3 {
+                position: absolute;
+                transform: translate(1787px, -33px);
+                text-decoration: none;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif
+            }
+            
+            .d {
+                position: absolute;
+                margin-left: 45.3%;
+                transform: translate(-5px, 250px);
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .d2 {
+                position: absolute;
+                margin-left: 45.3%;
+                transform: translate(5px, 848px);
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .scrollB{
+                background-color:lightgreen;
+                padding: 16px;
+                border-radius:50px;
+            }
+
+            .scrollB2{
+                background-color:lightgreen;
+                padding: 8px;
+                border-radius:50px;
+            }
+            
+            .middle {
+                text-align: center;
+                transform: translate(-20px, 200px);
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 500%;
+                
+            }
+            
+            
+            .middleIm {
+                text-align: center;
+
+                transform: translate(-40px, 250px);
             }
 
             .information {
-                font-family: 'Times New Roman', Times, serif;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 text-align: center;
-                padding-top: 150px;
-                font-size: large;
-                color: antiquewhite;
+                font-size: 175%;
+                color: rgb(0, 0, 0);
+                transform: translate(-35px, 780px)
             }
             
+            .q {
+                margin-left: 5%;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 200%;
+                color: rgb(50, 40, 40);
+                transform: translate(0px, 1100px);
+            }
+
+            .in {
+                text-align: center;
+                transform: translate(0px, 1800px);
+                background-color: rgb(41,189,193);
+                font-size: x-large;
+            }
+
+            .num1 {
+                color: rgb(155, 101, 0);
+                font-weight: bold;
+                text-size-adjust: 110%;
+            }
         </style>
-        <title></title>
     </head>
     <body>
         <img class = "background">
-        <nav class="navbar">
-            <a class="logo" href = "\"> TUMOR-DATA </a>
+        <img class = "background2" id = "down">
+        <img class = "background3" id = "down2">
 
-            <div class = "b">
-                <a class = "detectionButton" href = "\riskDetection">| TUMOR LOCATION DETECTOR |</a>
-                <a class = "quizButton" href = "\quiz">| TAKE QUIZ |</a>
-            </div>
-        </nav>
+
+        <div class = "navbar">
+            <img src = "https://images-platform.99static.com//p4qV4Cw5YyLUPRDbjSiNLniZEDU=/210x2945:1053x3788/fit-in/500x500/projects-files/64/6414/641472/1af8a316-da6d-4b6b-935f-9bfdc004eb03.jpg" height = 50 width = 70>
+        </div>
+        
+        <b><a class = b1 href = "/#down2">Take Quiz</a></b>
+        <b><a class = b2 href = "/riskDetection">Use Tumor Detector</a></b>
+        <b><a class = b3 href = "/">Home</a></b>
+        
+        <div class = "middleIm">
+            <img src = "https://images-platform.99static.com//p4qV4Cw5YyLUPRDbjSiNLniZEDU=/210x2945:1053x3788/fit-in/500x500/projects-files/64/6414/641472/1af8a316-da6d-4b6b-935f-9bfdc004eb03.jpg" height = 140 width = 180>
+        </div>
+        
+        <div class = "middle">
+            <b><br>Metastasis Backtracker</b>
+        </div>
+        
+        
+        <div class = "d">
+            <a href = "#down" class = "scrollB">Learn More</a>
+        </div>
+
         <div class = "information">
-            <h1>What is a tumor?</h1>
+            <h1 font-size = xx-large>What is a tumor?</h1>
                 <p>
                     A tumor is a growth of cells that diverges from regular cell division. <br> The tumor overides
                     cellular regulation due to a mutation of the gene from damaged cells. <br> While some tumors can be benign, many are 
-                    either cancerous or evolve to become cancerous.
+                    either cancerous or evolve to become cancerous. 
                     https://my.clevelandclinic.org/health/diseases/21881-tumor
+                    <br>
                 </p>
-            <h1>How does a tumor form?</h1>
-        
+            <h1 font-size = xx-large><br>How does a tumor form?</h1>
                 <p>
                     Damaged genes are able to lead in inhibited regulation of cellular division. <br> As a result, many "imperfect" cells can begin to form,
                     mutating further and further as they rapidly divide. <br> Stress, smoking, sun exposure, unhealthy foods, and alcohol are all leading 
-                    factors of cell damage and, as a result, contribute to someone's likelihood of developing the disease. 
+                    factors of cell damage <br> and, as a result, contribute to someone's likelihood of developing the disease. 
                     https://www.verywellhealth.com/cancer-causes-513773
+                    <br>
                 </p>
-
-            <h1>Metastasis</h1>
+            <h1 font-size = xx-large><br>Metastasis</h1>
                 <p>
                     As cancer divides, it has the ability to spread to other organs; this process is frequently referred to as metastasis. <br>
                     The significance of metastasis is that, depending on the location of the cancer, it may impair a different bodily function. <br>
@@ -114,9 +204,49 @@
                     https://training.seer.cancer.gov/disease/diagnosis/
                 </p>
         </div>
-        
 
-        
-       
+        <div class = "d2">
+            <a href = "#down2" class = "scrollB2">Take Quiz!</a>
+        </div>
+
+        <div class = "in">
+            <form method = "post" enctype="multipart/form-data">
+                <!-- <input type = "file" name = "file"/> -->
+                <label>Ans1:</label>
+                <input type="text" name="ans1"/>
+                <label>Ans2:</label>
+                <input type="text" name="ans2"/>
+                <label>Ans3:</label>
+                <input type="text" name="ans3"/>
+                <label>Ans4:</label>
+                <input type="text" name="ans4"/>
+                <input type = "submit" class = "submit" name = "submit"/>
+        </div>
+    
+        <div class = "q"> 
+        <ol>
+        <h1><li>What is a tumor?<a class="num1">{{Res0}}</a></li></h1>
+        <ul> 
+        <h2>
+        <li>a. An overgrowth of cartilage</li>
+        <li>b. A divergent group of cells with damaged/mutated DNA</li>
+        <li>c. A lump of food stuck in an organ</li>
+        <li>d. A sudden organ failure</li>
+        <br>
+        </h2>
+        </ul>
+        <h1><li>OPEN ENDED, do not use letters to express your answer: How many classifications of tumors are there?<a class="num1">{{Res1}}</a></li></h1>
+        <br>
+        <h1><li>Cigarettes increase your risk of developing cancer <a class="num1">{{Res2}}</a></li></h1>
+        <ul> 
+        <h2>
+        <li>T</li>
+        <li>F</li>
+        <br>
+        </h2>
+        </ul>
+        <h1><li>OPEN ENDED, 1 word: What is another name for an unharmful tumor? <a class="num1">{{Res3}}</a></li></h1>
+        </ol>
+        </div>
     </body>
 </html>

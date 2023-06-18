@@ -4,7 +4,6 @@ import pickle
 import pandas as pd
 
 st = Blueprint('start', __name__)
-qz = Blueprint('quiz', __name__)
 rd = Blueprint('riskDetection', __name__)
 
 
@@ -12,31 +11,39 @@ rd = Blueprint('riskDetection', __name__)
 def home():
     return render_template("Start.html",)
 
-@qz.route('/quiz', methods = ["POST", "GET"])
+@st.route('/', methods = ["POST", "GET"])
 def assessment():
     if request.method == "POST":
         answers = []
-        file = request.files["file"]
-        file.save(os.path.join(file.filename))
-        f = open(file.filename, 'r')
-        if (f.readline().replace("\n", "").replace(" ", "") == 'b'):
+        ans1 = request.form['ans1']
+        ans2 = request.form['ans2']
+        ans3 = request.form['ans3']
+        ans4 = request.form['ans4']
+        # file = request.files["file"]
+        # file.save(os.path.join(file.filename))
+        # f = open(file.filename, 'r')
+        # if (f.readline().replace("\n", "").replace(" ", "") == 'b'):
+        if (ans1 == 'b'):
             answers.append("CORRECT!")
         else:   
-            answers.append("INCORRECT")
-        if (f.readline().replace("\n", "").replace(" ", "") == '3'):
+            answers.append("INCORRECT!")
+        # if (f.readline().replace("\n", "").replace(" ", "") == '3'):
+        if (ans2 == '3'):
             answers.append("CORRECT!")
         else:
-            answers.append("INCORRECT")
-        if (f.readline().replace("\n", "").replace(" ", "") ==  "T"):
+            answers.append("INCORRECT!")
+        # if (f.readline().replace("\n", "").replace(" ", "") ==  "T"):
+        if (ans3 == "T"):
             answers.append("CORRECT!")
         else:
-            answers.append("INCORRECT")
-        if (f.readline() == 'benign'):
+            answers.append("INCORRECT!")
+        # if (f.readline() == 'benign'):
+        if (ans4 == 'benign'):
             answers.append("CORRECT!")
         else:
-            answers.append("INCORRECT")   
-        return render_template("QuizResult.html", Res0 = answers[0], Res1 = answers[1], Res2 = answers[2], Res3 = answers[3])
-    return render_template("QuizResult.html")
+            answers.append("INCORRECT!")   
+        return render_template("Start.html", Res0 = answers[0], Res1 = answers[1], Res2 = answers[2], Res3 = answers[3])
+    return render_template("Start.html")
 
 @rd.route('/riskDetection', methods = ["POST", "GET"])
 def det():
@@ -74,7 +81,7 @@ def det():
             22: "breast"
         }
 
-        x = [""]*5
+        x = [""] * 5
         
         for i in range(len(predictions)):
             if i == (len(predictions) - 1):
